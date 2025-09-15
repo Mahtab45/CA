@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Project</title>
+</head>
+
+<body>
+
+    <navbar>
+        <center>
+            <table width="90%">
+                <tr>
+                    <td><a href="index.html">Day 1</a></td>
+                    <td><a href="day_2.html">Day 2</a></td>
+                    <td><a href="day_3.html">Day 3</a></td>
+                    <td><a href="day_4.html">Day 4</a></td>
+                    <td><a href="day_5.html">Day 5</a></td>
+                    <td><a href="day_6.html">Day 6</a></td>
+                </tr>
+            </table>
+        </center>
+    </navbar>
+
+
+
+    <section>
+
+        <center>
+
+            <table width="90%">
+
+                <tr>
+                    <td>
+
+                       <center><h1>How Does Internet Work</h1></center>
+                        
+
+                        <h2>Principle 1: The Need to Share Information</h2>
+                        <ul>
+                            <li>We need to move information from one computer to another, even if they’re far apart. The
+                                simplest way is
+                                carrying it physically (like with a USB), but that’s slow. A better way is to connect
+                                the
+                                computers
+                                directly
+                                using a cable (ethernet/fiber). By sending signals (1s and 0s) through the cable, we
+                                create
+                                the most
+                                basic
+                                network — a direct link for communication.</li>
+                        </ul>
+
+                        <h2>Principle 2: The Problem of Scale</h2>
+                        <ul>
+                            <li>Directly connecting every computer to every other one doesn’t scale (too many cables).
+                                The solution is a central device (Switch) where all computers connect.
+                                The switch forwards messages only to the intended computer.
+                                This creates a Local Network (LAN) for efficient communication.</li>
+                        </ul>
+
+
+                        <h2>Principle 3: The Problem of Connecting Networks</h2>
+                        <ul>
+                            <li>Local networks alone can’t scale to connect with every computer in other offices.</li>
+                            <li>The solution is a Router, which links one network to another and forwards traffic.</li>
+                            <li>By connecting routers together, multiple networks can interconnect.</li>
+                            <li>The Internet is essentially a huge network of networks joined through routers.</li>
+                        </ul>
+
+                        <h2>Principle 4: The Problem of Finding Anyone (Addressing)</h2>
+
+                        <ul>
+                            <li>In a global network, every device needs a unique identifier to be found.</li>
+                            <li>This led to the creation of the IP Address, similar to a postal address.</li>
+                            <li>Each device gets a unique IP (e.g., 142.250.184.142).</li>
+                            <li>Routers read the destination IP and forward the message one step closer, using the best
+                                next
+                                hop.</li>
+                        </ul>
+
+                        <h2>Principle 5: The Problem of Reliability and Fairness</h2>
+                        <ul>
+                            <li>Sending large files at once is unfair (blocks others) and unreliable (corruption ruins
+                                the
+                                file).</li>
+                            <li>Solution: break data into small packets with payload, source/destination IPs, and
+                                sequence
+                                numbers.</li>
+                            <li>Packets may travel different routes; the receiver reassembles them and requests missing
+                                ones.</li>
+                            <li>These rules form a Protocol, mainly TCP/IP, which ensures reliable and fair data
+                                transfer.
+                            </li>
+                        </ul>
+
+
+                        <center><img src="img/internet.png"></center>
+
+                    </td>
+                </tr>
+
+            </table>
+        </center>
+
+
+        <table border="0" width="100%" cellpadding="12">
+            <tr>
+                <td>
+                    <center><h2>IPv4(Internet Protocol version 4)</h2></center>
+
+                </td>
+            </tr>
+        </table>
+
+
+        <table border="1" width="90%" align="center" cellpadding="10">
+            <tr>
+                <td>
+                    <h2>What is IPv4?</h2>
+                    <p>
+                        IPv4(Internet Protocol version 4) is the classic Internet Protocol address format.
+                        It is a <b>32-bit number</b> written as four decimal numbers (0–255) separated by dots:
+                    </p>
+                    <p><b>Example:</b> 172.217.16.142</p>
+
+                    <h3>Why this matters</h3>
+                    <ul>
+                        <li>32 bits → <b>2^32 ≈ 4.3 billion</b> total addresses.</li>
+                        <li>At first that seemed enough, but now laptops, phones, and IoT devices use them up fast.</li>
+                        <li>This shortage led to public vs private IPs and IPv6.</li>
+                    </ul>
+
+                    <hr>
+
+                    <h3>Key Takeaway</h3>
+                    <p>
+                        IPv4 gives every device a unique address, but 32 bits are not enough for today’s Internet —
+                        so we needed NAT, private IPs, and IPv6.
+                    </p>
+                </td>
+            </tr>
+        </table>
+
+
+
+    
+        <table border="0" width="100%" cellpadding="12">
+            <tr>
+                <td align="center">
+                    <h2>IPv6(Internet Protocol version 4)</h2>
+
+                </td>
+            </tr>
+        </table>
+
+   
+        <table border="1" width="90%" align="center" cellpadding="10">
+            <tr>
+                <td>
+                    <h2>Why IPv6?</h2>
+                    <p>
+                        IPv6 was created to solve the <b>address exhaustion</b> problem of IPv4.
+                    </p>
+
+                    <h3>Address Size Difference</h3>
+                    <ul>
+                        <li><b>IPv4:</b> 32-bit → about 4.3 billion addresses</li>
+                        <li><b>IPv6:</b> 128-bit → a huge leap in available addresses</li>
+                    </ul>
+
+                    <p>
+                        The number of possible IPv6 addresses is <b>2^128</b>, which is roughly:
+                    </p>
+                    <p><b>340,000,000,000,000,000,000,000,000,000,000,000,000</b>
+                        (340 undecillion)</p>
+
+                    <hr>
+
+                    <h3>IPv6 Address Format</h3>
+                    <p>
+                        Because IPv6 addresses are long, they use <b>hexadecimal</b> (0–9, a–f) and are written in a
+                        colon-separated format.
+                    </p>
+
+                    <p><b>Example:</b></p>
+                    <p>2001:0db8:85a3:0000:0000:8a2e:0370:7334</p>
+
+                    <ul>
+                        <li>Eight groups of four hexadecimal characters</li>
+                        <li>Groups separated by colons (:)</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+
+
+
+
+        <table border="0" width="100%" cellpadding="12">
+            <tr>
+                <td align="center">
+                    <h2>MAC Address</h2>
+                </td>
+            </tr>
+        </table>
+
+        <center>
+            <table border="1" width="90%" cellpadding="10">
+                <tr>
+                    <td>
+                        <h2>What is a MAC Address?</h2>
+                        <p>
+                            A <b>MAC (Media Access Control) Address</b> is a unique, permanent serial number burned into
+                            every network-capable piece of hardware (your laptop's Wi-Fi card, your phone, your smart TV,
+                            the network port on your desktop).
+                        </p>
+
+                        <h3>Format</h3>
+                        <p>Written in <b>hexadecimal</b>, usually 12 characters long:</p>
+                        <ul>
+                            <li><b>Colon-Separated:</b> 3C:22:FB:A3:B4:C5</li>
+                            <li><b>Hyphen-Separated:</b> 3C-22-FB-A3-B4-C5</li>
+                            <li><b>Period-Separated:</b> 3c22.fba3.b4c5</li>
+                            <li><b>No Separators:</b> 3C22FBA3B4C5</li>
+                        </ul>
+
+                        <hr>
+
+                        <h3>How to Find MAC Address</h3>
+                        <p><b>Windows:</b></p>
+                        <ol>
+                            <li>Open Command Prompt</li>
+                            <li>Run command: ipconfig /all</li>
+                            <li>Or use: getmac /v (to see only MAC addresses).</li>
+                        </ol>
+
+                        <p><b>macOS:</b></p>
+                        <ol>
+                            <li>Open Terminal</li>
+                            <li>Run command: ifconfig</li>
+                        </ol>
+                    </td>
+                </tr>
+            </table>
+
+
+        </center>
+
+       <center>
+            <table width="90%">
+                <tr>
+                    <td>
+                        <h2>Port Number</h2>
+                        <ul><li>Port numbers are <b>numerical identifiers (0–65535)</b> used in networking to identify specific applications or services running on a device.</li>
+                        <li>A port number is a <b>16-bit unsigned integer.</b> so valid range is <b> 0 to 65535</b>.
+                             
+                            <ul>
+                                <li><b>16-bit:</b> This means the number is stored using 16 binary digits (1s and 0s).</li>
+                                <li><b>Unsigned:</b> This means it cannot be negative. The values are all positive.</li>
+                            </ul>
+                          
+                        </li>
+                        </ul>
+
+                        <ul>
+                            <li>Relation with IP:
+                               
+                               <ul>
+                                   <li>IP Address → Identifies the <b>machine</b> (like ghar ka address).</li>
+                                   <li>Port Number → Identifies the <b>service/application</b> on that machine (like ghar ke andar room number).</li>
+                               </ul>
+
+                            </li>
+                        </ul>
+
+                        <h3>Categories of Port Numbers</h3>
+
+                        <ol>
+                            <li>
+                                <b>Well-Known Ports (0–1023):</b>
+                                <ul>
+                                    <li>Reserved for common services.</li>
+                                    <li>Example : 
+                                       
+                                       <ul>
+                                           <li>HTTP → 80</li>
+                                           <li>HTTPS → 443</li>
+                                           <li>FTP → 21</li>
+                                           <li>SSH → 22</li>
+                                       </ul>
+                                       
+                                    </li>
+                                </ul>
+                            </li><br>
+
+                            <li>
+                                <b>Registered Ports (1024–49151):</b>
+                                <ul>
+                                    <li>Used by software/applications that are not as universal as well-known ports.Companies and developers can register a port for their software to avoid conflicts with other applications.</li>
+                                    <li>Example :
+                                       
+                                       <ul>
+                                           <li>MySQL → 3306</li>
+                                           <li>PostgreSQL → 5432</li>
+                                           
+                                       </ul>
+                                       
+                                    </li>
+                                </ul>
+                            </li><br>
+
+                             <li>
+                                <b>Dynamic / Private Ports (49152–65535):</b>
+                                <ul>
+                                    <li>Temporary ports assigned by the operating </li>
+                                </ul>
+
+                            </li>
+                        </ol>
+
+
+                    </td>
+                </tr>
+            </table>
+       </center>
+
+
+
+
+       <center>
+           <table width="90%">
+               <tr>
+                   <td>
+                        <h2>DNS(DOMAIN NAME SYSTEM)</h2>
+                        <ul>
+                            <li>DNS is a global, distributed system that translates human-friendly domain names (like google.com) into computer-friendly IP addresses (like 142.250.184.142).</li>
+                        </ul>
+                         <h3>Why we need DNS?</h3>
+                         <ul>
+                             <li>Humans remember <b>names</b> easily, not numbers.</li>
+                             <li>Computers communicate using <b>IP addresses</b>.</li>
+                             <li>DNS works like the <b>phonebook of the Internet</b>, mapping names to numbers.</li>
+                             
+                         </ul>
+                        <center><img src="img/dns.png"  height="500" width="450"></center>
+                         
+                   </td>
+               </tr>
+           </table>
+       </center>
+      
+
+    </section>
+
+    <hr>
+
+    <footer>
+        <center>
+        <p>All Right Reserved &#169; Coder Army</p>
+        </center>
+    </footer>
+
+
+
+
+</body>
+
+</html>
